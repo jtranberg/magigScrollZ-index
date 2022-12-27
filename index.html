@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@1,500&display=swap" rel="stylesheet"><title>Magic Scroll</title>
+</head>
+<body>
+    <section>
+        <div class="sec sec1"><h2>MAGIC</h2></div>
+        <div class="sec sec2"><h2>MAGIC</h2></div>
+        <h2>MAGIC</h2>
+    </section>
+    <script>
+        let sec1 =document.querySelector('.sec1');
+        let sec2 =document.querySelector('.sec2');
+    
+        window.addEventListener('scroll', function(){
+        var value = window.scrollY;
+        sec1.style.clipPath = "circle("+value * 1.15+"px at 0 0)";
+        sec2.style.clipPath = "circle("+value * 0.85+"px at 100% 100%)";
+    })
+    </script>
+</body>
+</html>
